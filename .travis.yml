@@ -9,7 +9,6 @@ addons:
   apt:
     packages:
       - libgit2-dev
-      - libgit2
 
 # adding ncdf4 or libgit2 via binary packages does not work 
 # r_binary_packages:
