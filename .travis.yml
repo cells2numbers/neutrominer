@@ -1,12 +1,19 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-sudo: true
+sudo: false
 warnings_are_errors: false
 cache: packages
 
-r_binary_packages:
-  - ncdf4
+addons:
+  apt:
+    packages:
+      - libgit2-dev
+      - libgit2
+
+# adding ncdf4 or libgit2 via binary packages does not work 
+# r_binary_packages:
+#   - ncdf4
 
 r_packages:
   - covr
