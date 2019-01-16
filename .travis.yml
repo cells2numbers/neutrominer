@@ -14,6 +14,10 @@ addons:
 # r_binary_packages:
 #   - ncdf4
 
+## Use patched devtools
+r_github_packages:
+  - hadley/devtools
+  
 r_packages:
   - covr
 
