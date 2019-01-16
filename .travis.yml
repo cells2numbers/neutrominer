@@ -6,7 +6,7 @@ warnings_are_errors: false
 cache: packages
 
 r_binary_packages:
-  - libgit2
+  - ncdf4
 
 r_packages:
   - covr
