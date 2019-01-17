@@ -15,7 +15,7 @@ addons:
       - libgit2-dev
 
 install:
-  - Rscript -e 'install.packages("devtools", version = "1.9.1", repos = "http://cran.rstudio.com")'
+  - Rscript -e 'install.packages("devtools, version = 1.9.1", repos = "http://cran.rstudio.com")'
 
 r_packages:
   - covr
