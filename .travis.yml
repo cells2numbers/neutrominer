@@ -14,13 +14,8 @@ addons:
     packages:
       - libgit2-dev
 
-# adding ncdf4 or libgit2 via binary packages does not work 
-# r_binary_packages:
-#   - ncdf4
-
-## Use patched devtools
-#r_github_packages:
-#  - hadley/devtools
+install:
+  - Rscript -e 'install.packages("devtools", version = "1.9.1", repos = "http://cran.rstudio.com")'
 
 r_packages:
   - covr
