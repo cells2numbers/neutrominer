@@ -3,14 +3,14 @@ test_that("`track` collapse single cell data to track objects", {
   # sample data set with one simple tracks
   # todo: add more tracks to cover different scenarios inlcuding
   # *invalid tracks
-  data <- tibble::data_frame(
+  data <- tibble::tibble(
     Metadata_timePoint = c(1:5),
     Location_Center_X = c(1, 2, 3, 4, 5),
     Location_Center_Y = c(1, 1, 1, 1, 1),
     TrackObjects_Label = c(rep(1, 5))
   )
 
-  data2 <- tibble::data_frame(
+  data2 <- tibble::tibble(
     Metadata_timePoint = c(1:5),
     Location_Center_X = c(1, 2, 3, 4, 5),
     Location_Center_Y = c(1, 1, 1, 1, 1),
@@ -19,7 +19,7 @@ test_that("`track` collapse single cell data to track objects", {
   )
 
 
-  data2 <- dplyr::group_by_(data2,
+  data2 <- dplyr::group_by(data2,
     .dots = c("TrackObjects_Label", "Metadata_condition")
     )
 
